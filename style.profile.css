@@ -1,0 +1,390 @@
+   /* プロフィールページ専用CSS */
+       body{
+ font-family:'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+margin: 0;
+  padding: 0;
+   background-color: white;
+  color:#444444;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+   header{
+width: 100%;
+    height: 80px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+ margin-right: auto;
+     color:#444444;
+}
+header li{
+color:#444444;
+}
+/* ナビゲーション */
+.link_size{
+  
+  list-style: none;
+  margin: 0;
+padding: 0 20px;
+  padding: 5px;
+ margin: 5px;
+}
+nav{
+width: 50%;    
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+     padding: 10px;
+}
+nav li{
+     list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+nav ul li a{
+text-decoration: none;
+    color: #000;
+
+}
+
+.active{
+  color: #444444;
+  padding-bottom: 3px; /* テキストと下線の間隔 */
+  /* font-size: 60px; */
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* 下線の初期位置 */
+  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  transition: background-size 0.3s;
+}
+.active:hover{
+  background-position: bottom left; /* 下線のホバー時位置 */
+  background-size: 100% 1px; /* 下線の横幅を100%にする */
+}
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 5rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-size: 27px;
+  font-weight: 300;
+  text-align: left;
+  color:#444444
+}
+
+.section__text__p1 {
+  text-align: left;
+  color: #444444;
+}
+
+.section__text__p2 {
+  color: #444444;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 70px;
+  
+}
+.section__text__p3{
+ color: #444444;
+text-align: center;
+}
+
+.title {
+  color:#444444;
+  font-size: 3rem;
+  text-align: center;
+}
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  /* margin-left: 50px 50px; */
+
+}
+   .profile-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+                /* フッター */
+.sr-only{
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+}
+
+footer{
+  background-color: #2d3436;
+    color: white;
+     text-align: center;
+     padding: 3px 0;
+margin-top: 10px;
+}
+.footer-section h3{
+color: #fff;
+}
+.footer-content{
+ display: flex;
+ justify-content: space-between;
+
+}
+.footer-section a {
+  color: #ccc;
+  text-decoration:none;
+}
+ ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* display:center; */
+  flex-wrap: wrap;
+  justify-content: center;
+  /* line-height: 25px; */
+}
+
+li{
+
+  list-style: none;
+  margin: 0;
+padding: 0 20px;
+  padding: 5px;
+ margin: 5px;
+
+}
+.copyright{
+  color: #aaa;
+  text-align: center;
+margin-top: 5px;
+}
+.footer-section{
+display: inline-block;
+  justify-content: center;
+  margin: 10px;
+  width: 24%;
+  margin: 40px auto;
+padding: 0;
+line-height: 25px;
+margin-left: auto;
+margin-right:auto
+}
+.active_2{
+  padding-bottom: 3px; /* テキストと下線の間隔 */
+  /* font-size: 60px; */
+  background-image: linear-gradient(#aaa, #aaa);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* 下線の初期位置 */
+  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  transition: background-size 0.3s;
+}
+.active_2:hover{
+  background-position: bottom left; /* 下線のホバー時位置 */
+  background-size: 100% 1px; /* 下線の横幅を100%にする */
+}
+
+@media screen and (max-width: 768px) {
+
+.section__text{
+ margin-top: 150px;
+}
+#profile{
+  display:block;
+    justify-content: center;
+     padding: 0;
+    margin: 0;
+
+}
+.section__text h1{
+ margin: 0;
+  height: 50px;
+  text-align: center;
+  flex-direction: column;
+    display: flex;
+ position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+      
+}
+.section__text__p2{
+text-align: center;
+line-height: 50px;
+}
+.section__pic-container{
+ flex-direction: column;
+    display: flex;  
+width: 300px;
+    height: 300px;
+  margin-left: auto;
+margin-right:auto
+
+}
+  
+  
+  /* ヘッダーのフォントサイズをスマホ用に調整 */
+  /* .section__pic-container{
+ position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* background: rgba(0, 0, 0, 0.5); */
+            /* z-index: 1;
+  } */
+ 
+  .profile{
+        flex-direction: column;
+    display: flex;
+ position: relative;
+z-index: 2;
+  max-width: 600px;
+ padding: 20px;
+  }
+  h1 title{
+    flex-direction: column;
+   display: flex;
+ position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+  }  
+/* .section__pic-container{
+       flex-direction: column; 
+  padding: 20px 10px;
+    height: auto;
+    height: 50px;
+  
+} */
+  
+  header {
+       flex-direction: column;
+    padding: 20px 10px;
+    height: auto;
+    text-align: center;
+  }
+  
+  header h1 {
+     flex-direction: column;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0;
+  }
+ 
+  
+  header p {
+    font-size: 0.9rem;
+  }
+
+  
+  /* ナビゲーションを縦並びに変更 */
+  nav ul {
+    flex-direction: column;
+    margin: 0;
+    /* gap: 10px; */
+  }
+  
+  nav li {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  nav a {
+    /* display: block; */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}

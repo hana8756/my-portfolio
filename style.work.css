@@ -1,0 +1,414 @@
+  /* ギャラリー専用のCSS */
+      body{
+   font-family:'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+margin: 0;
+  padding: 0;
+   background-color: white;
+  color:#000;
+  line-height: 1.2;
+  font-size: 1rem;
+}  
+header{
+width: 100%;
+    height: 80px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+ margin-right: auto;
+ color:#444444;
+}
+header li{
+color:#444444;
+}
+/* ナビゲーション */
+.link_size{
+  
+  list-style: none;
+  margin: 0;
+padding: 0 20px;
+  padding: 5px;
+ margin: 5px;
+ 
+}
+nav{
+width: 50%;    
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+         padding: 10px;
+}
+nav li{
+     list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+nav ul li a{
+text-decoration: none;
+    color: #000;
+
+}
+
+.active{
+  color: #444444;
+    padding-bottom: 3px; /* テキストと下線の間隔 */
+  /* font-size: 60px; */
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* 下線の初期位置 */
+  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  transition: background-size 0.3s;
+}
+.active:hover{
+  background-position: bottom left; /* 下線のホバー時位置 */
+  background-size: 100% 1px; /* 下線の横幅を100%にする */
+}
+.gallery-grid{
+display:flex;
+align-items: flex-start;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.gallery-item{
+
+    box-sizing: border-box;
+/* border:1px solid #ccc; */
+/* margin:auto; */
+/* width: calc(50% - 20px / 2); */
+}
+
+.item:nth-child(2n){
+margin-right:0;
+}
+
+.item:nth-child(3n){
+margin-right:20px;
+}
+
+.item:nth-child(6){
+margin-right:0;
+}
+
+/* .gallery-item:hover{
+ 	opacity:0.5;
+	transition:0.3s;   
+} */
+/* .gallery-content h3{
+ font-size:		130%;
+	text-align: 		center;
+	padding-top:		80px;
+	color:			#fff;   
+} */
+ .item_box * {
+  box-sizing: border-box;
+}
+.item_box {
+  width: 100%;
+  /* max-width: 250px; 幅調整 */
+}
+.item_link {
+  display: block;
+}
+.item_content {
+  position: relative;
+  overflow: hidden;
+}
+.item_image img {
+width: 100%;
+            vertical-align: top;
+}
+.item_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+.item_mask-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 0.8em;
+  text-align: center;
+  color: #fff;
+  transform: translateY(-50%);
+}
+.item_text {
+  margin-top: 10px;
+  text-align: center;
+}
+.item_box .item_link:hover .item_mask {
+  opacity: 1;
+}
+/* -fade-in */
+.item_box.-fade-in .item_mask {
+  transition: opacity 1.0s ease;
+}
+
+  .review-container {
+            max-width: 1500px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .review-container h2{
+      display: none;
+        }
+
+        .review-main {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        
+        
+        
+        /* ギャラリーグリッド（3列表示） */
+        
+        .gallery-grid {
+            width:100%;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 10px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            /* border-radius: 8px; */
+            overflow: hidden;
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .gallery-content {
+            padding: 12px;
+            text-align: center;
+            display: block;
+        }
+
+        .gallery-content h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            line-height: 1.3;
+            color: #2d3436;
+
+ overflow: hidden;          /* 溢れた部分を隠す */
+  text-overflow: ellipsis;   /* 溢れた部分を「...」にする */
+  white-space: nowrap;       /* 1行で表示 */
+
+
+        }
+
+        .gallery-content .rating {
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            color: #fdcb6e;
+        }
+
+        .gallery-content .btn {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+        }
+        /* フッター */
+.sr-only{
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+}
+
+footer{
+  background-color: #2d3436;
+    color: white;
+     text-align: center;
+     padding: 3px 0;
+margin-top: 10px;
+}
+.footer-section h3{
+color: #fff;
+}
+.footer-content{
+ display: flex;
+ justify-content: space-between;
+
+}
+.footer-section a {
+  color: #ccc;
+  text-decoration:none;
+}
+ ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* display:center; */
+  flex-wrap: wrap;
+  justify-content: center;
+  /* line-height: 25px; */
+}
+
+li{
+
+  list-style: none;
+  margin: 0;
+padding: 0 20px;
+  padding: 5px;
+ margin: 5px;
+
+}
+.copyright{
+  color: #aaa;
+  text-align: center;
+margin-top: 5px;
+}
+.footer-section{
+display: inline-block;
+  justify-content: center;
+  margin: 10px;
+  width: 24%;
+  margin: 40px auto;
+padding: 0;
+line-height: 25px;
+margin-left: auto;
+margin-right:auto
+}
+.active_2{
+  padding-bottom: 3px; /* テキストと下線の間隔 */
+  /* font-size: 60px; */
+  background-image: linear-gradient(#aaa, #aaa);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* 下線の初期位置 */
+  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  transition: background-size 0.3s;
+}
+.active_2:hover{
+  background-position: bottom left; /* 下線のホバー時位置 */
+  background-size: 100% 1px; /* 下線の横幅を100%にする */
+}
+/* ボタン */
+
+.btn {
+ color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  
+  display: inline-block;
+}
+
+        /* レスポンシブ対応 */
+
+        /* タブレット（768px以下） */
+        @media screen and (max-width: 768px) {
+           header {
+       flex-direction: column;
+    padding: 20px 10px;
+    height: auto;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0;
+  }
+  .hello{
+   margin: 0; 
+     font-size: 4rem;
+  }
+  
+  header p {
+    font-size: 0.9rem;
+  }
+            .review-container {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+            
+            .review-main {
+                padding: 20px 15px;
+            }
+            
+            /* ギャラリーグリッドを3列表示に変更 */
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .gallery-item img {
+                height: 150px;
+            }
+             nav ul {
+    flex-direction: column;
+    margin: 0;
+    /* gap: 10px; */
+  }
+  
+  nav li {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  nav a {
+    /* display: block; */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+        }
+
+        /* スマホ（480px以下） */
+        @media screen and (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .gallery-item img {
+                width:100%;
+                height:auto;
+            }
+            
+            .gallery-content h3 {
+                font-size: 1rem;
+            }
+            
+            .gallery-content .rating {
+                font-size: 0.9rem;
+            }
+            
+            .gallery-content .btn {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }

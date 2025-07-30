@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+
+body{
+font-family:'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+margin: 0;
+  padding: 0;
+   background-color: white;
+  color:#444444;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+/* ↓ここにimg要素に対するルールセットを入れる */
+
+/* ↑ここにimg要素に対するルールセットを入れる */
+
+/* ヘッダー */
+
+header{
+width: 100%;
+    height: 80px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+ margin-right: auto;
+    color:#444444;
+}
+header li{
+color:#444444;
+}
+main{
+ /* background-color: blueviolet; */
+   background-size: 100%;
+   /* width: 500px; */
+   height: 500px;
+   padding: 50px;
+   margin: 10px;
+   text-align: center;
+     display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  
+   /* background-color: blue; */
+    /* flex:2; */
+}
+
+.hello{
+   color:#444444;
+  text-align: center;
+  /* display: flex; */
+  font-size: 75px;
+  /* justify-content: center;
+  align-items: center; */
+}
+.hello2{
+    color:#808080;
+  text-align: center;
+    /* display: flex; */
+    font-size: 30px;
+   /* justify-content: center;
+  align-items: center; */
+}
+/* ナビゲーション */
+.link_size{
+  
+  list-style: none;
+  margin: 0;
+padding: 0 20px;
+  padding: 5px;
+ margin: 5px;
+ 
+}
+nav{
+width: 50%;    
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+     padding: 10px;
+}
+nav li{
+     list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+nav ul li a{
+text-decoration: none;
+    color: #000;
+
+}
+.active{
+ color: #444444;
+  padding-bottom: 3px; /* テキストと下線の間隔 */
+  /* font-size: 60px; */
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* 下線の初期位置 */
+  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  transition: background-size 0.3s;
+}
+.active:hover{
+  background-position: bottom left; /* 下線のホバー時位置 */
+  background-size: 100% 1px; /* 下線の横幅を100%にする */
+}
+/* コンテナ */
+.container{
+  background-image:url(../img/back-ground.png);
+  background-size: cover;
+ /* background-size: 100%; */
+  /* width: 1000px; */
+   height: 650px;
+   padding: 50px;
+   margin: 10px 0px 10px 0px;
+   text-align: center;
+
+}
+/* メインコンテンツ */
+
+
+
+/* フッター */
+.sr-only{
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+}
+
+footer{
+  background-color: #2d3436;
+    color: white;
+     text-align: center;
+     padding: 3px 0;
+margin-top: 10px;
+}
+.footer-section h3{
+color: #fff;
+}
+.footer-content{
+ display: flex;
+ justify-content: space-between;
+
+}
+.footer-section a {
+  color: #ccc;
+  text-decoration:none;
+}
+ ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* display:center; */
+  flex-wrap: wrap;
+  justify-content: center;
+  /* line-height: 25px; */
+}
+
+li{
+
+  list-style: none;
+  margin: 0;
+padding: 0 20px;
+  padding: 5px;
+ margin: 5px;
+
+}
+.copyright{
+  color: #aaa;
+  text-align: center;
+margin-top: 5px;
+}
+.footer-section{
+display: inline-block;
+  justify-content: center;
+  margin: 10px;
+  width: 24%;
+  margin: 40px auto;
+padding: 0;
+line-height: 25px;
+margin-left: auto;
+margin-right:auto
+}
+.active_2{
+  padding-bottom: 3px; /* テキストと下線の間隔 */
+  /* font-size: 60px; */
+  background-image: linear-gradient(#aaa, #aaa);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* 下線の初期位置 */
+  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  transition: background-size 0.3s;
+}
+.active_2:hover{
+  background-position: bottom left; /* 下線のホバー時位置 */
+  background-size: 100% 1px; /* 下線の横幅を100%にする */
+}
+/* ボタン */
+
+.btn {
+ color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  
+  /* ヘッダーのフォントサイズをスマホ用に調整 */
+  header {
+       flex-direction: column;
+    padding: 20px 10px;
+    height: auto;
+  }
+  
+  header h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0;
+  }
+  .hello{
+   margin: 0; 
+     font-size: 3rem;
+  }
+  .hello2{
+    font-size: 13px;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+
+  
+  /* ナビゲーションを縦並びに変更 */
+  nav ul {
+    flex-direction: column;
+    margin: 0;
+    /* gap: 10px; */
+  }
+  
+  nav li {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  nav a {
+    /* display: block; */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+ .back-ground.png{
+    max-width: 100%;
+    /* background-image: cover; */
+  }
+  
+  /* メインレイアウトを縦並びに変更 */
+  .container {
+    /* background-image:cover; */
+    max-width: 768px;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 0 10px;
+    gap: 15px;
+  }
+  .container ul{
+    line-height: 70px;
+  }
+  
+  /* 記事グリッドを1列表示に変更 */
+  .review-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* セクションタイトルのサイズ調整 */
+  section h2 {
+    font-size: 1.3rem;
+  }
+  
+  /* 記事コンテンツの調整 */
+  .article-content {
+    padding: 12px;
+  }
+  
+  article h3 {
+    font-size: 1rem;
+  }
+  
+  /* ボタンの調整 */
+  .btn {
+    padding: 10px 16px;
+  }
+}
+/* スマホ対応（768px以下） */
+@media screen and (max-width: 768px) {
+  
+  /* ここにスマホ用のフッターを書く */
+
+   /* フッターのフォントサイズをスマホ用に調整 */
+  footer  a {
+    font-size: 1.0rem;
+  }
+   /* ナビゲーションを縦並びに変更 */
+  footer li{
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    display: block;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  
+  
+  nav li {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    margin: auto;
+  }
+  
+ /* メインレイアウトを縦並びに変更 */
+  .footer-content{
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 0px 0px ;
+    gap: 15px;
+  }
+/* 記事グリッドを1列表示に変更 */
+  .footer-section{
+display: inline-block;
+  justify-content: center;
+  margin: 70px;
+  width: 70%;
+  margin: 50px auto;
+padding: 0px;
+line-height: 25px;
+margin-left: auto;
+margin-right:auto
+}
+  
+}
+
+
